@@ -1,0 +1,12 @@
+name: BlockShuffle
+version: 1.9
+api-version: 1.16
+author: Kamen
+main: me.kamen.BlockShuffle.Main
+description: Dream's block shuffle challenge
+
+commands:
+  startBS:
+    description: starts the block shuffle game for all
+  stopBS:
+    description: ends the block shuffle challenge for all
