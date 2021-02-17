@@ -57,6 +57,7 @@ public class startBS implements CommandExecutor{
 				int cnt = 10;
 				int time = RoundTime;
 				
+				
 				@Override
 				public void run() {
 					
@@ -70,7 +71,7 @@ public class startBS implements CommandExecutor{
 								
 										
 										mat = mats[rand.nextInt(mats.length-1)];
-										while(!mat.isSolid() || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("SLAB") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("HEAD")) {
+										while(!mat.isSolid() || mat.name().contains("SIGN") || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("PURPUR") || mat.name().contains("HEAD")) {
 											mat = mats[rand.nextInt(mats.length-1)];
 										}
 										
@@ -134,7 +135,7 @@ public class startBS implements CommandExecutor{
 											
 											if(!hasABlock) {
 												mat = mats[rand.nextInt(mats.length-1)];
-												while(!mat.isSolid() || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("SLAB") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("HEAD")) {
+												while(!mat.isSolid() || mat.name().contains("SIGN") || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("PURPUR") || mat.name().contains("HEAD")) {
 													mat = mats[rand.nextInt(mats.length-1)];
 												}
 												
@@ -150,6 +151,16 @@ public class startBS implements CommandExecutor{
 						}else {
 							
 							p.getServer().broadcastMessage(ChatColor.RED + "" + ChatColor.BOLD + "" + Integer.toString(cnt--) + " seconds remaining!");
+							
+						}
+						
+					}
+					
+					if(!end && !isEnding && !isStarting) {
+						
+						if(time % 60 == 0) {
+							
+							p.getServer().broadcastMessage(ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "" + (time/60) + " minutes are remaining!");
 							
 						}
 						
@@ -173,7 +184,7 @@ public class startBS implements CommandExecutor{
 									
 									
 									mat = mats[rand.nextInt(mats.length-1)];
-									while(!mat.isSolid() || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("SLAB") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("HEAD")) {
+									while(!mat.isSolid() || mat.name().contains("SIGN") || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("PURPUR") || mat.name().contains("HEAD")) {
 										mat = mats[rand.nextInt(mats.length-1)];
 									}
 									

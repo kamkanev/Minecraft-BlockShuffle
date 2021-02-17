@@ -2,9 +2,13 @@
 
 Block shuffle is a plugin server game for minecraft: java edition.
 
+ **Please star and share the project! :)**
+
 ## Installation
 
-Download the project. Than copy `.jar` file from `download` folder and paste it in your minecraft plugins folder. Make sure the server is running on 1.16.~ version.
+**I recommend downloading the plugin from [spigot](https://www.spigotmc.org/resources/block-shuffle.89056/), because it's only the plugin `jar` file.**
+
+But if you want, you can download the project. Than copy `.jar` file from `download` folder and paste it in your minecraft plugins folder. Make sure the server is running on 1.16.~ (1.16.4 recommended) version.
 
 More information for how to install and use plugins you can find [here](https://bukkit.gamepedia.com/Installing_Plugins).
 
@@ -34,13 +38,17 @@ If there are problems. You can stop the game manualy by typing:
 /stopbs
 ```
 
+## Under development
+
+  * fixing text gliches
+  * making ranking system
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## Under development
+## Latest update
 
-* block types
-* add slabs
-* implement for lower version of the game
+  * Every minute you are being notified how much time is remaining.
+  * Removed block types: signs, purpur and end blocks.
