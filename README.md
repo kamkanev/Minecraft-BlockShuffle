@@ -8,7 +8,7 @@ Block shuffle is a plugin server game for minecraft: java edition.
 
 **I recommend downloading the plugin from [spigot](https://www.spigotmc.org/resources/block-shuffle.89056/), because it's only the plugin `jar` file.**
 
-But if you want, you can download the project. Than copy `.jar` file from `download` folder and paste it in your minecraft plugins folder. Make sure the server is running on 1.16.~ (1.16.4 recommended) version.
+But if you want, you can download the project. Then copy `.jar` file from `download` folder and paste it in your minecraft plugins folder. Make sure the server is running on 1.16.~ (1.16.4 recommended) version.
 
 More information for how to install and use plugins you can find [here](https://bukkit.gamepedia.com/Installing_Plugins).
 
