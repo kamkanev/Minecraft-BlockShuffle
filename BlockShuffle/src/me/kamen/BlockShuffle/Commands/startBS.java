@@ -5,7 +5,11 @@ import java.util.Map.Entry;
 import java.util.Random;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Color;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Particle;
+import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -30,6 +34,8 @@ public class startBS implements CommandExecutor{
 		
 		
 		Player p = (Player) sender;
+		
+		Particle.DustOptions found = new Particle.DustOptions(Color.LIME, 2);
 		
 		BukkitScheduler sched = p.getServer().getScheduler();
 		Material[] mats = Material.values();
@@ -135,6 +141,9 @@ public class startBS implements CommandExecutor{
 											
 											if(!hasABlock) {
 												mat = mats[rand.nextInt(mats.length-1)];
+												Location loc = p.getServer().getPlayer(entry.getKey()).getLocation();
+												loc.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, loc.getX(), loc.getY(), loc.getZ(), 0, 0, 0, 0, found);
+												p.getServer().getPlayer(entry.getKey()).playSound(p.getServer().getPlayer(entry.getKey()).getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 												while(!mat.isSolid() || mat.name().contains("SIGN") || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("PURPUR") || mat.name().contains("HEAD")) {
 													mat = mats[rand.nextInt(mats.length-1)];
 												}
@@ -184,6 +193,10 @@ public class startBS implements CommandExecutor{
 									
 									
 									mat = mats[rand.nextInt(mats.length-1)];
+
+									Location loc = p.getServer().getPlayer(entry.getKey()).getLocation();
+									loc.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, loc.getX(), loc.getY(), loc.getZ(), 0, 0, 0, 0, found);
+									p.getServer().getPlayer(entry.getKey()).playSound(p.getServer().getPlayer(entry.getKey()).getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 									while(!mat.isSolid() || mat.name().contains("SIGN") || mat.name().contains("SHULKER") ||mat.name().contains("INFESTED") || mat.name().contains("BANNER") || mat.name().contains("DOOR") || mat.name().contains("COMMAND") || mat.name().contains("DEAD") || mat.name().contains("DIAMOND_BLOCK") || mat.name().contains("EMERALD") || mat.name().contains("END") || mat.name().contains("PURPUR") || mat.name().contains("HEAD")) {
 										mat = mats[rand.nextInt(mats.length-1)];
 									}
@@ -192,13 +205,14 @@ public class startBS implements CommandExecutor{
 									p.getServer().getPlayer(entry.getKey()).sendMessage("You have 5 minutes to find: " + mat.name());
 								}
 								
-								numberofPlayersFoundBlocks = 0;
+								
 								isEnding = false;
 								isStarting = false;
 								time = RoundTime;
 								cnt = 10;
 								
 							}
+							numberofPlayersFoundBlocks = 0;
 							
 						}
 						
