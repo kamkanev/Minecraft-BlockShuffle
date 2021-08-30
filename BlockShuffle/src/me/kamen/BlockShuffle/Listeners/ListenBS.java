@@ -2,6 +2,7 @@ package me.kamen.BlockShuffle.Listeners;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -30,6 +31,7 @@ public class ListenBS implements Listener{
 			this.plugin.plmap.replace(p.getName(), null);
 			
 			p.getServer().broadcastMessage(p.getName() + " found " + bmat.name());
+			p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 		}
 		
 	}
